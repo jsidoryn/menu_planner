@@ -9,6 +9,13 @@
   </head>
 
   <body>
+		<h1>Meal Planer</h1>
+		<div>
+			<ul>
+				<li><%= link_to "Recipes", recipes_path %></li>
+				<li><%= link_to "Shortlist", shortlist_path(1) %></li>
+			</ul>
+		</div>
     <%= yield %>
   </body>
 </html>
