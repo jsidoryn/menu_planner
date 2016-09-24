@@ -1,4 +1,5 @@
-<h2>Shortlist</h2>
+<h2>Shortlist</h2
+<p><%= link_to "Remove all recipes", remove_all_shortlist_path if @shortlist.recipes.present? %></p>
 
 <div class="container">
 	<% @recipes.each do |recipe|  %>
