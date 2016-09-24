@@ -4,6 +4,11 @@
 
 <p><%= simple_format(@recipe.description) %></p>
 
+<p><strong>Ingredients</strong><br />
+  <% @recipe.items.each do |item| %>
+		 <%= item.quantity %>  <%=item.unit %> <%= item.ingredient.title %>
+	<% end %>
+</p>
 <p>Link: <%= link_to "Visit the site", @recipe.url %></p>
 
 <p>
