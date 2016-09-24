@@ -27,15 +27,13 @@
 </p>
 <% if @recipe.shortlist %>
 <p>
-  <%= link_to "Remove from shortlist", remove_shortlist_path(@recipe) %>
+  <%#= link_to "Remove from shortlist", remove_shortlist_path(@recipe) %>
 </p>
 <% else %>
 <p>
   <%= link_to "Add to shortlist", add_shortlist_path(@recipe) %>
 </p>
 <% end %>
-<p>Shortlist: <%= @recipe.shortlist.title if @recipe.shortlist %></p>
-
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
