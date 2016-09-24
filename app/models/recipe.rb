@@ -3,4 +3,6 @@ class Recipe < ApplicationRecord
 	dragonfly_accessor :image
 
 	validates :title, presence: true
+
+	enum meal: { breakfast: 0, lunch: 1, dinner: 2, dessert: 3, snack: 4 }
 end

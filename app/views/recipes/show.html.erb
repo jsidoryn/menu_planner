@@ -7,32 +7,36 @@
 <p>Link: <%= link_to "Visit the site", @recipe.url %></p>
 
 <p>
-  <strong>Book:</strong>
-  <%= @recipe.book %>
+<strong>Book:</strong>
+<%= @recipe.book %>
 </p>
 
 <p>
-  <strong>Page:</strong>
-  <%= @recipe.page %>
+<strong>Page:</strong>
+<%= @recipe.page %>
 </p>
 
 <p>
-  <strong>Net carbs:</strong>
-  <%= @recipe.net_carbs %>
+<strong>Net carbs:</strong>
+<%= @recipe.net_carbs %>
 </p>
 
 <p>
-  <strong>Rating:</strong>
-  <%= @recipe.rating %>
+<strong>Rating:</strong>
+<%= @recipe.rating %>
+</p>
+<p>
+<strong>Meal: </strong>
+<%= @recipe.meal %>
 </p>
 <% if @recipe.shortlist %>
-<p>
-  <%#= link_to "Remove from shortlist", remove_shortlist_path(@recipe) %>
-</p>
+	<p>
+	<%#= link_to "Remove from shortlist", remove_shortlist_path(@recipe) %>
+	</p>
 <% else %>
-<p>
-  <%= link_to "Add to shortlist", add_shortlist_path(@recipe) %>
-</p>
+	<p>
+	<%= link_to "Add to shortlist", add_shortlist_path(@recipe) %>
+	</p>
 <% end %>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

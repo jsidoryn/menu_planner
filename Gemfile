@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'simple_form'
+gem 'enum_help'
 gem 'dragonfly', '~> 1.0.12'
 
 group :development, :test do
