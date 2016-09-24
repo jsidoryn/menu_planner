@@ -1,18 +1,14 @@
 <h1>Recipes</h1>
-
-<table>
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.title %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
 <%= link_to 'New Recipe', new_recipe_path %>
+
+<div class="container">
+	<% @recipes.each do |recipe|  %>
+		<div class="card card--fixedWidth">
+			<div class="card__image">
+				<%= image_tag recipe.image.thumb('200x200#').url if recipe.image_stored? %>
+			</div>
+			<div class="card__title"><%= link_to  recipe.title, recipe %></div>
+		</div>
+	<% end %>
+</div>
+
