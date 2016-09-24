@@ -9,13 +9,19 @@
   </head>
 
   <body>
-		<h1>Meal Planer</h1>
-		<div>
-			<ul>
-				<li><%= link_to "Recipes", recipes_path %></li>
-				<li><%= link_to "Shortlist", shortlist_path(1) %></li>
-			</ul>
-		</div>
-    <%= yield %>
+    <div class="wrapper">
+      <header class="main-header">
+        <div class="main-header__section">
+          <h1>Meal Planner</h1>
+        </div>
+        <div class="main-header__section">
+          <%= link_to "Recipes", recipes_path %> &nbsp;|&nbsp; <%= link_to "Shortlist", shortlist_path(1) %>
+        </div>
+      </header>
+  		<section>
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+  		</section>
+    </div>
   </body>
 </html>

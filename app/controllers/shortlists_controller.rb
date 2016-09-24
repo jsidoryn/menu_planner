@@ -1,6 +1,27 @@
 class ShortlistsController < ApplicationController
+
+	before_action :set_shortlist
+
 	def show
-		@shortlist = Shortlist.find(params[:id])
 		@recipes = @shortlist.recipes
+	end
+
+	def add
+		@recipe = Recipe.find(params[:id])
+		@shortlist.recipes << @recipe
+		redirect_to recipes_path(@recipe), notice: 'Recipe was successfully added to shortlist.'
+	end
+
+	def remove
+	  @recipe = Recipe.find(params[:id])	
+		@shortlist.recipes.destroy(@recipe)
+		redirect_to recipes_path(@recipe), notice: 'Recipe was successfully remove from the shortlist.'
+
+	end
+
+	private
+
+	def set_shortlist
+		@shortlist = Shortlist.find(1)
 	end
 end

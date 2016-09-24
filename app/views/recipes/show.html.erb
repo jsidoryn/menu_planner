@@ -1,29 +1,10 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag @recipe.image.thumb('1200x500#').url if @recipe.image_stored? %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
-</p>
+<h2><%= @recipe.title %></h2>
 
-<p>
-  <strong>Sub title:</strong>
-  <%= @recipe.sub_title %>
-</p>
+<p><%= simple_format(@recipe.description) %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @recipe.description %>
-</p>
-
-<p>
-  <strong>Source:</strong>
-  <%= @recipe.source %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @recipe.url %>
-</p>
+<p>Link: <%= link_to "Visit the site", @recipe.url %></p>
 
 <p>
   <strong>Book:</strong>
@@ -44,11 +25,17 @@
   <strong>Rating:</strong>
   <%= @recipe.rating %>
 </p>
-
+<% if @recipe.shortlist %>
 <p>
-  <strong>Shortlist:</strong>
-  <%= @recipe.shortlist.title if @recipe.shortlist %>
+  <%= link_to "Remove from shortlist", remove_shortlist_path(@recipe) %>
 </p>
+<% else %>
+<p>
+  <%= link_to "Add to shortlist", add_shortlist_path(@recipe) %>
+</p>
+<% end %>
+<p>Shortlist: <%= @recipe.shortlist.title if @recipe.shortlist %></p>
+
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>

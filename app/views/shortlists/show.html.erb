@@ -1,7 +1,12 @@
-<h1>Shortlist</h1>
+<h2>Shortlist</h2>
 
-<ul>
+<div class="container">
 	<% @recipes.each do |recipe|  %>
-		<li><%= link_to  recipe.title, recipe %></li>
+		<div class="card card--fixedWidth">
+			<div class="card__image">
+				<%= image_tag recipe.image.thumb('200x200#').url if recipe.image_stored? %>
+			</div>
+			<div class="card__title"><%= link_to  recipe.title, recipe %></div>
+		</div>
 	<% end %>
-</ul>
+</div>
