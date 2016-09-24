@@ -3,6 +3,8 @@ class Recipe < ApplicationRecord
 	has_many :items
 	has_many :ingredients, :through => :items
 
+	accepts_nested_attributes_for :items, allow_destroy: true
+
 	dragonfly_accessor :image
 
 	validates :title, presence: true

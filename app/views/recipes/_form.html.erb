@@ -6,6 +6,13 @@
     <%= f.input :sub_title %>
 		<%= f.input :image, as: :file %>
     <%= f.input :description %>
+		<p><strong>Ingredients</strong></p>
+		<%= f.simple_fields_for :items do |item| %>
+			<%= item.check_box :_destroy %>
+			<%= item.association :ingredient %> 
+			<%= item.input :quantity %> 
+			<%= item.input :unit %>
+		<% end %>
     <%= f.input :source %>
     <%= f.input :url %>
     <%= f.input :book %>
