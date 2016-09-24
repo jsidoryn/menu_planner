@@ -3,7 +3,7 @@ class Recipe < ApplicationRecord
 	has_many :items
 	has_many :ingredients, :through => :items
 
-	accepts_nested_attributes_for :items, allow_destroy: true
+	accepts_nested_attributes_for :items, allow_destroy: true, :reject_if => :all_blank
 
 	dragonfly_accessor :image
 
