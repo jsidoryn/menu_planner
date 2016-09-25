@@ -7,12 +7,12 @@
 		<%= f.input :image, as: :file %>
     <%= f.input :description %>
 		<p><strong>Ingredients</strong></p>
-		<%= f.simple_fields_for :items do |item| %>
-			<%= item.check_box :_destroy %>
-			<%= item.association :ingredient %> 
-			<%= item.input :quantity %> 
-			<%= item.input :unit %>
-		<% end %>
+		<div id="items">
+			<%= f.simple_fields_for :items do |item| %>
+				<%= render 'item_fields', f: item %>
+				<%= link_to_add_association "Add item", f, :items, 'data-association-insertion-method' => "after"  %>
+			<% end %>
+		</div>
     <%= f.input :source %>
     <%= f.input :url %>
     <%= f.input :book %>
