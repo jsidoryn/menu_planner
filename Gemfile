@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'compass-rails'
+gem 'htmlentities'
 gem 'simple_form'
 gem 'enum_help'
 gem 'dragonfly', '~> 1.0.12'
@@ -48,6 +49,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 	gem 'pry-rails'
+	gem 'ornament', github: 'katalyst/ornament'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

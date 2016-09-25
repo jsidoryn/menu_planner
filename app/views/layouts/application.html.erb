@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MealPlanner</title>
-    <%= csrf_meta_tags %>
+<% content_for :global do %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%- content_for :page_main do -%>
+    <% if content_for? :title %>
+      <h1 class="heading-one page--title">
+        <%= yield :title %>
+      </h1>
+    <% end %>
+    <%= content_for?(:application) ? yield(:application) : yield %>
+  <%- end -%>
 
-  <body>
-    <div class="wrapper">
-      <header class="main-header">
-        <div class="main-header__section">
-          <h1>Meal Planner</h1>
-        </div>
-        <div class="main-header__section">
-          <%= link_to "Recipes", recipes_path %> &nbsp;|&nbsp; <%= link_to "Shortlist", shortlist_path(1) %> &nbsp;|&nbsp; <%= link_to "Ingredients", ingredients_path %>
-        </div>
-      </header>
-  		<section>
-        <p id="notice"><%= notice %></p>
-        <%= yield %>
-  		</section>
+  <%- if content_for? :sidebar -%>
+    <div class="page__with-sidebar">
+      <div class="page--main">
+        <%= yield :page_main -%>
+      </div>
+      <div class="page--sidebar">
+        <%= yield :sidebar -%>
+      </div>
     </div>
-  </body>
-</html>
+  <%- elsif content_for? :sidebar_right -%>
+    <div class="page__with-sidebar-right">
+      <div class="page--main">
+        <%= yield :page_main -%>
+      </div>
+      <div class="page--sidebar">
+        <%= yield :sidebar_right -%>
+      </div>
+    </div>
+  <%- else -%>
+    <%= yield :page_main -%>
+  <%- end -%>  
+  
+<% end %>
+
+<%= render :file => "layouts/global" %>

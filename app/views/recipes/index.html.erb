@@ -1,14 +1,8 @@
 <h1>Recipes</h1>
 <%= link_to 'New Recipe', new_recipe_path %>
 
-<div class="container">
+<div class="clearfix">
 	<% @recipes.each do |recipe|  %>
-		<div class="card card--fixedWidth">
-			<div class="card__image">
-				<%= image_tag recipe.image.thumb('200x200#').url if recipe.image_stored? %>
-			</div>
-			<div class="card__title"><%= link_to  recipe.title, recipe %></div>
-		</div>
+		<%= render partial: "shared/recipe", object: recipe %>
 	<% end %>
 </div>
-

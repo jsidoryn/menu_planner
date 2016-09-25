@@ -1,0 +1,8 @@
+<%= link_to(recipe, class: "card") do %>
+  <div class="card--image">
+    <%= image_tag recipe.image.thumb('200x200#').url if recipe.image_stored? %>
+  </div>
+  <div class="card--content compressed">
+    <p><strong class="nested-link--target"><%= recipe.title %></strong></p>
+  </div>
+<% end %>
