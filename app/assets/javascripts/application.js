@@ -1,6 +1,5 @@
 // HIGH PRIORITY JAVASCRIPT INCLUDED AT TOP OF PAGE
 
-//= require cocoon
 //= require ornament/core
 //= require utilities/show
 //= require components/tabs
@@ -12,3 +11,4 @@
 //= require components/embed
 //= require components/menu-with-more
 //= require components/enhanced-form
+//= require cocoon

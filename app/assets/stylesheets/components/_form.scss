@@ -174,7 +174,7 @@ select {
 @include pretty-select {
 
   select[multiple],
-  select[multiple][size], 
+  select[multiple][size],
   select[size] {
     background-image: none;
     padding-right: 3px;

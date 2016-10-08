@@ -1,8 +1,8 @@
-<h2>Shortlist</h2
+<%- content_for :title, "Shortlist" -%>
 <p><%= link_to "Remove all recipes", remove_all_shortlist_path if @shortlist.recipes.present? %></p>
 
 <div class="clearfix">
-	<% @recipes.each do |recipe|  %>
+	<% @recipes.each do |recipe| %>
 		<%= render partial: "shared/recipe", object: recipe %>
 	<% end %>
 </div>
