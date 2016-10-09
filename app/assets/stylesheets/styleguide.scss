@@ -202,19 +202,19 @@ hr {
   .navigation-mobile.complex .pane--navigation-container ul {
     border-bottom-color: $x-dark-grey;
   }
-  .navigation-mobile.complex .pane--navigation-container ul li + li > a, 
+  .navigation-mobile.complex .pane--navigation-container ul li + li > a,
   .navigation-mobile.complex .pane--navigation-container ul li + li > .faux-link {
     border-top-color: $x-dark-grey;
   }
   .navigation-mobile.complex .pane-wrapper .pane a, .navigation-mobile.complex .pane-wrapper .pane .faux-link {
     @include font($body-font);
   }
-  .navigation-mobile.complex .navigation-item > a:before, 
-  .navigation-mobile.complex .navigation-item > span.faux-link:before, 
+  .navigation-mobile.complex .navigation-item > a:before,
+  .navigation-mobile.complex .navigation-item > span.faux-link:before,
   .navigation-mobile.complex .navigation-item > button:before {
     background: transparent;
   }
-  .navigation-mobile.complex .pane-wrapper .pane a, 
+  .navigation-mobile.complex .pane-wrapper .pane a,
   .navigation-mobile.complex .pane-wrapper .pane .faux-link {
     @include color-link($primary-color, $primary-color);
   }
@@ -230,7 +230,7 @@ hr {
   // }
 }
 
-// FEATURE TABS 
+// FEATURE TABS
 $sg-feature-border: $light-grey;
 $sg-feature-background: $background-color;
 

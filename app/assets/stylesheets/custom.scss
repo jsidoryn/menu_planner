@@ -1,17 +1,21 @@
+
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #ececec;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 #page {
   display: flex;
-  height: 100%;
-  width: 80%;
+  flex: 1;
   margin: 2% auto;
+  width: 80%;
   background-color: #fff;
   border: 1px solid #D2D2D2;
   padding: 5%;
-  flex-direction: column;
 }
 
 header {
@@ -24,6 +28,14 @@ header {
 }
 
 .content {
+  flex: 1;
+  > h1 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+  > p {
+    margin-bottom: 1em;
+  }
 }
 
 label {
@@ -38,4 +50,24 @@ label {
 
 form.simple_form {
   width: 70%;
+}
+
+// Forms
+
+.control-group {
+  margin-bottom: 1em;
+}
+
+input, textarea, select {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem 0.25rem;
+}
+
+.nested-fields {
+  clear: both;
+  > .control-group {
+    width: 20%;
+    float:left;
+  }
 }

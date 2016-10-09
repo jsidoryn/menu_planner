@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+
   resources :ingredients
 	root "recipes#index"
   resources :recipes
