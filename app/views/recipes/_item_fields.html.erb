@@ -2,5 +2,6 @@
 	<%= f.association :ingredient, input_html: {class: "form--small"} %>
 	<%= f.input :quantity %>
 	<%= f.input :unit %>
+	<%= f.input :orderable, label: "Order" %>
 	<%= link_to_remove_association "Remove item", f %>
 </div>
