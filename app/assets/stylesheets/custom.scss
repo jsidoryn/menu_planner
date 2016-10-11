@@ -38,6 +38,11 @@ header {
   }
 }
 
+img {
+	display: block;
+	width: 100%;
+}
+
 label {
   font-weight: bold;
 }
@@ -46,6 +51,14 @@ label {
   width: 200px;
   float: left;
   margin-right: 20px;
+}
+
+// Flash
+
+.panel__error, .panel__notice {
+  background: #ececec;
+  padding: 1em 2em;
+  margin-bottom: 1em;
 }
 
 // Forms
@@ -59,12 +72,9 @@ form.simple_form {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
-}
-
-input, textarea, select {
-  width: 100%;
-  font-size: 1rem;
-  padding: 0.25rem 0.25rem;
+  > .error-block {
+    color: red;
+  }
 }
 
 .nested-fields {
@@ -75,7 +85,32 @@ input, textarea, select {
   }
 }
 
+.controls {
+  > .radio {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
 a.add_fields {
   display: block;
   margin-bottom: 1em;
+}
+
+input, textarea, select {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem 0.25rem;
+}
+
+.decimal, .integer {
+  width: 3em;
+}
+
+.button {
+  width: auto;
+  display: inline-block;
+  background-color: #ececec;
+  border: 1px solid #ececec;
+  padding: 5px 10px;
 }
