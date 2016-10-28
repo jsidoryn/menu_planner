@@ -6,7 +6,7 @@
 
 <p><strong>Ingredients</strong><br />
   <% @recipe.items.each do |item| %>
-		 <%= item.quantity %>  <%=item.unit %> <%= item.ingredient.title %><br />
+		 <%= item.quantity %>  <%=item.unit %> <%= item.ingredient.title %>, <%= item.note %><br />
 	<% end %>
 </p>
 <p>Link: <%= link_to "Visit the site", @recipe.url %></p>

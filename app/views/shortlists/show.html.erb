@@ -2,7 +2,11 @@
 <p><%= link_to "Remove all recipes", remove_all_shortlist_path if @shortlist.recipes.present? %></p>
 
 <div class="clearfix">
-	<% @recipes.each do |recipe| %>
-		<%= render partial: "shared/recipe", object: recipe %>
+	<% if @recipes.present? %>
+		<% @recipes.each do |recipe| %>
+			<%= render partial: "shared/recipe", object: recipe %>
+		<% end %>
+	<% else %>
+		<p>No recipes on the shortlist</p>
 	<% end %>
 </div>

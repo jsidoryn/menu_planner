@@ -9,7 +9,7 @@ class ShortlistsController < ApplicationController
 	def add
 		@recipe = Recipe.find(params[:id])
 		@shortlist.recipes << @recipe
-		redirect_to recipes_path(@recipe), notice: 'Recipe was successfully added to shortlist.'
+		redirect_to shortlist_path(@shortlist), notice: 'Recipe was successfully added to shortlist.'
 	end
 
 	def remove
@@ -20,7 +20,7 @@ class ShortlistsController < ApplicationController
 
 	def remove_all
 		@shortlist.recipes.clear
-		redirect_to recipes_path
+		redirect_to shortlist_path(@shortlist)
 	end
 
 	private
