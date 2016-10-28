@@ -1,8 +1,8 @@
 <div class="nested-fields form-siblings">
-	<%= p.input :quantity %>
-	<%= p.input :unit %>
-	<%= p.association :ingredient, input_html: {class: "form--small"} %>
-	<%= p.input :orderable, label: "Order" %>
-	<%= p.input :note %>
-	<%= link_to_remove_association "Remove item", p %>
+	<%= f.input :quantity %>
+	<%= f.input :unit %>
+	<%= f.association :ingredient, input_html: {class: "form--small"} %>
+	<%= f.input :orderable, label: "Order" %>
+	<%= f.input :note %>
+	<%= link_to_remove_association "Remove item", f %>
 </div>

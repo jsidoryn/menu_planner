@@ -13,7 +13,7 @@ class ShortlistsController < ApplicationController
 	end
 
 	def remove
-	  @recipe = Recipe.find(params[:id])	
+	  @recipe = Recipe.find(params[:id])
 		@shortlist.recipes.destroy(@recipe)
 		redirect_to recipes_path(@recipe), notice: 'Recipe was successfully remove from the shortlist.'
 	end

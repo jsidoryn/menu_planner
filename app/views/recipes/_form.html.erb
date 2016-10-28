@@ -8,17 +8,10 @@
     <%= f.input :description %>
 		<p><strong>Ingredients</strong></p>
 		<div id="items" data-update-url="<%= sort_items_url %>">
-			<%= f.simple_fields_for :items do |p| %>
-        <div class="nested-fields form-siblings">
-          <%= p.input :quantity %>
-          <%= p.input :unit %>
-          <%= p.association :ingredient, input_html: {class: "form--small"} %>
-          <%= p.input :orderable, label: "Order" %>
-          <%= p.input :note %>
-          <%= link_to_remove_association "Remove item", p %>
-        </div>
-				<%= link_to_add_association "Add item", p, :items, 'data-association-insertion-method' => "after"  %>
+			<%= f.simple_fields_for :items do |f| %>
+        <%= render 'item_fields', f: f %>
 			<% end %>
+      <%= link_to_add_association "Add item", f, :items, 'data-association-insertion-method' => "after"  %>
 		</div>
     <%= f.input :source %>
     <%= f.input :url %>
