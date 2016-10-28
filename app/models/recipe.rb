@@ -1,9 +1,9 @@
 class Recipe < ApplicationRecord
 	belongs_to :shortlist, optional: true
 	has_many :items
-	has_many :ingredients, :through => :items
+	has_many :ingredients, through: :items
 
-	accepts_nested_attributes_for :items, allow_destroy: true, :reject_if => :all_blank
+	accepts_nested_attributes_for :items, allow_destroy: true, reject_if: :all_blank
 
 	dragonfly_accessor :image
 
