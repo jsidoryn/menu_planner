@@ -34,4 +34,28 @@ Controller tests for session access - request a round and see whether you get th
 before and after tests for logging in as user etc
 check for routes that are enabled or disabled
 
+Also...
+
+Spend time daily on tools etc
+
+defaults write com.apple.finder AppleShowAllFiles YES
+
+
+# Today
+
+refactor routes for shortlist
+create a presenter
+
 120 lines rather than 80
+
+aws - sync cli, or transmit
+
+# Done
+
+get rubocop setup
+configure rubocop for stuff
+create a helper for items
+
+# Future
+
+Work out how to customise linter and tie into Katalyst workflow

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -62,7 +61,7 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'faker' #some older RubySnacks reference 'ffaker'
+  gem 'faker' # some older RubySnacks reference 'ffaker'
   gem 'simple_bdd'
   gem 'shoulda-matchers'
 end

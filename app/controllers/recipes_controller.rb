@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
-		@recipe.items.build
+    @recipe.items.build
   end
 
   def edit
@@ -39,11 +39,17 @@ class RecipesController < ApplicationController
   end
 
   private
-    def set_recipe
-      @recipe = Recipe.find(params[:id])
-    end
 
-    def recipe_params
-      params.require(:recipe).permit(:title, :sub_title, :description, :source, :url, :book, :page, :net_carbs, :rating, :shortlist_id, :image, :meal, items_attributes: [:recipe_id, :ingredient_id, :quantity, :unit, :orderable, :note, :_destroy, :id])
-    end
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def recipe_params
+    params.require(:recipe).permit(
+      :title, :sub_title, :description, :source, :url,
+      :book, :page, :net_carbs, :rating, :shortlist_id, :image, :meal,
+      items_attributes: [
+        :recipe_id, :ingredient_id, :quantity, :unit, :orderable, :note, :_destroy, :id
+      ])
+  end
 end
