@@ -28,3 +28,10 @@ Check through heroku setup
 https://github.com/colszowka/simplecov
 
 Don't use default scope - scope is hidden
+
+Test scopes
+Controller tests for session access - request a round and see whether you get the right response back
+before and after tests for logging in as user etc
+check for routes that are enabled or disabled
+
+120 lines rather than 80
