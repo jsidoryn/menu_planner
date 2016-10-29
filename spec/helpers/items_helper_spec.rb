@@ -8,7 +8,7 @@ describe ItemsHelper do
 
     it "returns a well formatted string" do
       item = create(:item)
-      expect(show_items(item)).to eq("5.0 tsp Carrot, thinly sliced")
+      expect(show_items(item)).to eq("5 tsp carrots, thinly sliced")
     end
   end
 end

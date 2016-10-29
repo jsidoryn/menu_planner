@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :item do
     quantity 5
     unit 1
-    note "thinly sliced"
+    note "Thinly sliced"
     ingredient
   end
 end
