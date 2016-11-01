@@ -36,7 +36,8 @@ gem 'htmlentities'
 gem 'simple_form'
 gem 'enum_help'
 gem 'dragonfly', '~> 1.0.12'
-gem "cocoon"
+gem 'dragonfly-s3_data_store'
+gem 'cocoon'
 
 group :development, :test do
   gem 'pry'
