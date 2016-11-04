@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :ingredients
   root "recipes#index"
   resources :recipes
-  resources :shortlists do
+  resource :shortlist do
     member do
       get 'remove_all'
     end
