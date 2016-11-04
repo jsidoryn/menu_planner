@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @view = view_context
   end
 
   def new
