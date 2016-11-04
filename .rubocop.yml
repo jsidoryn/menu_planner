@@ -3,3 +3,6 @@ StringLiterals:
 
 Documentation:
     Enabled: false
+
+Metrics/LineLength:
+  Max: 130

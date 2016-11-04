@@ -44,6 +44,7 @@ defaults write com.apple.finder AppleShowAllFiles YES
 # Today
 
 refactor routes for shortlist
+should shortlist be a resource 
 create a presenter
 
 120 lines rather than 80

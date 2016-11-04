@@ -36,11 +36,11 @@
 </p>
 <% if @recipe.shortlist %>
 	<p>
-	<%#= link_to "Remove from shortlist", remove_shortlist_path(@recipe) %>
+	<%= link_to "Remove from shortlist", shortlist_path(@recipe), method: :delete %>
 	</p>
 <% else %>
 	<p>
-	<%= link_to "Add to shortlist", add_shortlist_path(@recipe) %>
+	<%= link_to "Add to shortlist", shortlists_path(recipe_id: @recipe), method: :post %>
 	</p>
 <% end %>
 
