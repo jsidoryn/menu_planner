@@ -1,8 +1,18 @@
+# Today
+
+Code review
+- tdd
+- should use traits for different types of string input?
+- if testing shortlist - how to load a recipe
+Presenters
+Heroku db sync
+AWS command line sync
+Test for shortlist refactor - feature spec - how to load
+
 # To Do
 
 Work out questions for raz
 - how best to work with data. want to start adding in content and start using
-- when i restart my app the image doesn't show on heroku
 - eg add to live sync to local
 - dragonfly images
 - wheres my database.yml?
@@ -12,6 +22,7 @@ Work out questions for raz
 - better options than heroku?
 - slow tests?
 – warning message in tests?
+- singular resource route for shortlists
 
 Get basic tests setup
 
@@ -43,11 +54,9 @@ defaults write com.apple.finder AppleShowAllFiles YES
 
 # Today
 
-refactor routes for shortlist
-should shortlist be a resource 
+should shortlist be a resource
 create a presenter
 
-120 lines rather than 80
 
 aws - sync cli, or transmit
 
@@ -56,6 +65,9 @@ aws - sync cli, or transmit
 get rubocop setup
 configure rubocop for stuff
 create a helper for items
+refactor routes for shortlist
+120 lines rather than 80
+
 
 # Future
 
