@@ -1,5 +1,7 @@
-class ItemPresenter < BasePresenter
-  presents :item
+class OldItemPresenter
+  def initialize(item)
+    @item = item
+  end
 
   def show_items
     output = "#{item.quantity.to_int} #{item.unit} #{item.ingredient.title.downcase.pluralize(item.quantity)}"
@@ -7,7 +9,5 @@ class ItemPresenter < BasePresenter
     output
   end
 
-  def show_link
-    link_to("Recipes", root_path)
-  end
+  attr_reader :item
 end

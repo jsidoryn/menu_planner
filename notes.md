@@ -1,5 +1,11 @@
 # Today
 
+katalyst
+- patch - do on staging first, make sure all good and then do - generally all pretty good
+- if restart or db setting change then may need downtime, preferred is to spin up a new server
+- rubocop - on commit hook for git just add a script
+- can also overwrite on a per method basis
+
 Code review
 - tdd
 - should use traits for different types of string input?

@@ -6,7 +6,10 @@
 
 <p><strong>Ingredients</strong><br />
   <% @recipe.items.each do |item| %>
-    <%= ItemPresenter.new(item).show_items %><br />
+    <% present item do |item_presenter| %>
+      <%= item_presenter.show_items %><br />
+      <%= item_presenter.show_link %><br />
+    <% end %>
 	<% end %>
 </p>
 <p>Link: <%= link_to "Visit the site", @recipe.url %></p>
