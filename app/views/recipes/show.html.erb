@@ -7,8 +7,8 @@
 <p><strong>Ingredients</strong><br />
   <% @recipe.items.each do |item| %>
     <% present item do |item_presenter| %>
-    <%= item_presenter.show_items %><br />
-    <%= item_presenter.show_link %><br />
+      <%= item_presenter.show_items %><br />
+      <%= item_presenter.show_link %><br />
     <% end %>
 	<% end %>
 </p>

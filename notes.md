@@ -4,14 +4,13 @@ katalyst
 - patch - do on staging first, make sure all good and then do - generally all pretty good
 - if restart or db setting change then may need downtime, preferred is to spin up a new server
 - rubocop - on commit hook for git just add a script
-
+- can also overwrite on a per method basis
 
 Code review
 - tdd
 - should use traits for different types of string input?
 - if testing shortlist - how to load a recipe
 Presenters
-Pry - how to get to the end
 Heroku db sync
 AWS command line sync
 Test for shortlist refactor - feature spec - how to load

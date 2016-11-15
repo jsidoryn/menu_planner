@@ -1,5 +1,12 @@
-# require 'rails_helper'
-#
+require 'rails_helper'
+
+feature "shortlist a recipe" do
+  scenario "shortlist recipe" do
+    recipe = FactoryGirl.create(:recipe)
+    visit recipe_path(recipe)
+  end
+end
+
 # feature "member create a recipe" do
 #   scenario "create recipe" do
 #     visit root_path
